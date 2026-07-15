@@ -4,10 +4,10 @@
 # macOS
 .DS_Store
 
-# Auto-generated import artifacts for our hand-parsed data CSVs
-# (we read these CSVs manually via FileAccess at runtime, not through
-# Godot's resource import system, so these sidecar files are unwanted noise)
-data/*.csv.import
+# data/*.csv.import files ARE committed on purpose: they pin importer="keep"
+# so Godot never re-converts our hand-parsed CSVs into Translation resources
+# (which would exclude the raw CSV from exports). Only ignore any stray
+# Translation sidecar files that pre-date that fix.
 data/*.translation
 
 # Web export build output (regenerate with Project > Export)

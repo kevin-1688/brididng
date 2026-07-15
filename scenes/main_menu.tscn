@@ -43,6 +43,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Multiplayer"
 
+[node name="WebNoteLabel" type="Label" parent="Layout"]
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 13
+modulate = Color(0.576471, 0.635294, 0.709804, 1)
+visible = false
+text = "web note"
+
 [node name="LocalPreviewLabel" type="Label" parent="Layout"]
 layout_mode = 2
 horizontal_alignment = 1

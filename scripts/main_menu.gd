@@ -3,6 +3,7 @@ extends Control
 @onready var title_label: Label = $Layout/TitleLabel
 @onready var subtitle_label: Label = $Layout/SubtitleLabel
 @onready var multiplayer_button: Button = $Layout/MultiplayerButton
+@onready var web_note_label: Label = $Layout/WebNoteLabel
 @onready var local_preview_label: Label = $Layout/LocalPreviewLabel
 @onready var round1_button: Button = $Layout/Round1Button
 @onready var round2_button: Button = $Layout/Round2Button
@@ -20,6 +21,9 @@ func _ready() -> void:
 	quit_button.pressed.connect(func(): get_tree().quit())
 	if Network.is_networked:
 		Network.leave()
+	if OS.has_feature("web"):
+		multiplayer_button.visible = false
+		web_note_label.visible = true
 	_refresh_text()
 
 func _go_local(scene_path: String) -> void:
@@ -31,6 +35,7 @@ func _refresh_text() -> void:
 	title_label.text = "%s." % Loc.t("ui_menu_title")
 	subtitle_label.text = Loc.t("ui_menu_subtitle")
 	multiplayer_button.text = "🌐 " + Loc.t("ui_menu_multiplayer")
+	web_note_label.text = Loc.t("ui_menu_web_note")
 	local_preview_label.text = Loc.t("ui_menu_local_preview")
 	round1_button.text = "🎭 " + Loc.t("ui_menu_round1")
 	round2_button.text = "📰 " + Loc.t("ui_menu_round2")

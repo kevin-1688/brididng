@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3]
 
+[ext_resource type="FontFile" path="res://fonts/NotoSansTC-Variable.ttf" id="1_rqugq"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_denks"]
 content_margin_left = 20.0
 content_margin_top = 12.0
@@ -113,6 +115,7 @@ border_width_bottom = 1
 border_color = Color(0.8980392, 0.6392157, 0.23921569, 1)
 
 [resource]
+default_font = ExtResource("1_rqugq")
 default_font_size = 20
 Button/colors/font_color = Color(0.9529412, 0.9137255, 0.84313726, 1)
 Button/colors/font_disabled_color = Color(0.898, 0.639, 0.239, 0.5)
