@@ -1,0 +1,11 @@
+id,order,phase_type,title_key,body_key
+1,1,text,r3_consent_title,r3_consent_text
+2,2,text,r3_ground_rules_title,r3_ground_rules_text
+3,3,topics,r3_phase_topic_title,
+4,4,text,r3_technique_title,r3_technique_text
+5,5,text,r3_checklist_title,r3_checklist_text
+6,6,text,ui_round3_phase_common_ground,r3_common_ground_q
+7,7,text,r3_proposal_title,r3_proposal_text
+8,8,text,ui_round3_phase_thermometer,r3_thermometer_text
+9,9,debrief,ui_round3_phase_debrief,
+10,10,text,r3_facilitator_note_title,r3_facilitator_note_text

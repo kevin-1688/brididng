@@ -1,0 +1,7 @@
+id,card_key,generation_tag,icon,name_key,background_key,monologue_key
+1,card_01,youth,🧑,card1_name,card1_bg,card1_mono
+2,card_02,senior_official,🧓,card2_name,card2_bg,card2_mono
+3,card_03,midlife,👩,card3_name,card3_bg,card3_mono
+4,card_04,elder,👴,card4_name,card4_bg,card4_mono
+5,card_05,young_parent,👨‍👧,card5_name,card5_bg,card5_mono
+6,card_06,official,🧑‍💼,card6_name,card6_bg,card6_mono

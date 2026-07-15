@@ -1,0 +1,134 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/round3_dialogue.gd" id="1"]
+
+[node name="Round3Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = 48.0
+offset_right = -56.0
+offset_bottom = -48.0
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.898039, 0.639216, 0.239216, 1)
+theme_override_font_sizes/font_size = 34
+text = "Round 3"
+
+[node name="TopBar" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="PhaseCounterLabel" type="Label" parent="Layout/TopBar"]
+layout_mode = 2
+text = "1 / 10"
+
+[node name="Spacer" type="Control" parent="Layout/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LangButton" type="Button" parent="Layout/TopBar"]
+layout_mode = 2
+text = "EN / 中文"
+
+[node name="BackButton" type="Button" parent="Layout/TopBar"]
+layout_mode = 2
+text = "Back"
+
+[node name="ContentSection" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PhaseTitleLabel" type="Label" parent="Layout/ContentSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="ContentPanel" type="PanelContainer" parent="Layout/ContentSection"]
+layout_mode = 2
+theme_type_variation = &"CardPanel"
+
+[node name="PhaseBodyLabel" type="Label" parent="Layout/ContentSection/ContentPanel"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="TopicsSection" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+visible = false
+theme_override_constants/separation = 14
+
+[node name="TopicsTitleLabel" type="Label" parent="Layout/TopicsSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="TopicList" type="VBoxContainer" parent="Layout/TopicsSection"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TopicPanel" type="PanelContainer" parent="Layout/TopicsSection"]
+layout_mode = 2
+theme_type_variation = &"CardPanel"
+visible = false
+
+[node name="TopicFramingLabel" type="Label" parent="Layout/TopicsSection/TopicPanel"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="DebriefSection" type="VBoxContainer" parent="Layout"]
+layout_mode = 2
+visible = false
+theme_override_constants/separation = 14
+
+[node name="DebriefTitleLabel" type="Label" parent="Layout/DebriefSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="DebriefList" type="VBoxContainer" parent="Layout/DebriefSection"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TimerPanel" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+theme_type_variation = &"CardPanel"
+
+[node name="TimerBar" type="HBoxContainer" parent="Layout/TimerPanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimerLabel" type="Label" parent="Layout/TimerPanel/TimerBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.898039, 0.639216, 0.239216, 1)
+theme_override_font_sizes/font_size = 30
+text = "90"
+
+[node name="TimerStartButton" type="Button" parent="Layout/TimerPanel/TimerBar"]
+layout_mode = 2
+text = "Start Timer"
+
+[node name="TimerResetButton" type="Button" parent="Layout/TimerPanel/TimerBar"]
+layout_mode = 2
+text = "Reset"
+
+[node name="NavBar" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PrevPhaseButton" type="Button" parent="Layout/NavBar"]
+layout_mode = 2
+text = "Prev"
+
+[node name="NextPhaseButton" type="Button" parent="Layout/NavBar"]
+layout_mode = 2
+text = "Next"
+
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 1.0

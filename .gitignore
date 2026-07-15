@@ -1,0 +1,21 @@
+# Godot 4 editor cache
+.godot/
+
+# macOS
+.DS_Store
+
+# Auto-generated import artifacts for our hand-parsed data CSVs
+# (we read these CSVs manually via FileAccess at runtime, not through
+# Godot's resource import system, so these sidecar files are unwanted noise)
+data/*.csv.import
+data/*.translation
+
+# Web export build output (regenerate with Project > Export)
+Bridging.html
+Bridging.js
+Bridging.wasm
+Bridging.pck
+Bridging.png
+Bridging.png.import
+Bridging.audio.position.worklet.js
+Bridging.audio.worklet.js
