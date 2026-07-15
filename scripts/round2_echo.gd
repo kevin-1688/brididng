@@ -11,7 +11,7 @@ enum Mode { BROWSE, TRUTH, DEBRIEF }
 @onready var debrief_button: Button = $Layout/ModeBar/DebriefButton
 
 @onready var browse_section: VBoxContainer = $Layout/BrowseSection
-@onready var pack_tabs: HBoxContainer = $Layout/BrowseSection/PackTabs
+@onready var pack_tabs: HFlowContainer = $Layout/BrowseSection/PackTabs
 @onready var pack_name_label: Label = $Layout/BrowseSection/PackNameLabel
 @onready var card_text_label: Label = $Layout/BrowseSection/CardPanel/CardText
 @onready var card_counter_label: Label = $Layout/BrowseSection/CardNav/CardCounterLabel
@@ -163,7 +163,8 @@ func _refresh_text() -> void:
 		pack_name_label.text = Loc.t(pack.name_key)
 		facilitator_note_text.text = Loc.t(pack.frame_key)
 		for i in range(pack_buttons.size()):
-			pack_buttons[i].text = "%s %s" % [Round2Data.packs[i].icon, Loc.t(Round2Data.packs[i].name_key)]
+			pack_buttons[i].text = "%s %s" % [Round2Data.packs[i].icon, Round2Data.packs[i].pack_id]
+		pack_tabs.queue_sort()
 		var list: Array = Round2Data.cards[pack.pack_id]
 		if list.size() > 0:
 			card_text_label.text = Loc.t(list[current_card_index])

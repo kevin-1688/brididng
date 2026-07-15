@@ -26,7 +26,7 @@ theme_override_colors/font_color = Color(0.898039, 0.639216, 0.239216, 1)
 theme_override_font_sizes/font_size = 34
 text = "Round 3"
 
-[node name="TopBar" type="HBoxContainer" parent="Layout"]
+[node name="TopBar" type="HFlowContainer" parent="Layout"]
 layout_mode = 2
 
 [node name="PhaseCounterLabel" type="Label" parent="Layout/TopBar"]
@@ -100,7 +100,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_type_variation = &"CardPanel"
 
-[node name="TimerBar" type="HBoxContainer" parent="Layout/TimerPanel"]
+[node name="TimerBar" type="HFlowContainer" parent="Layout/TimerPanel"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
@@ -118,7 +118,7 @@ text = "Start Timer"
 layout_mode = 2
 text = "Reset"
 
-[node name="NavBar" type="HBoxContainer" parent="Layout"]
+[node name="NavBar" type="HFlowContainer" parent="Layout"]
 layout_mode = 2
 theme_override_constants/separation = 12
 

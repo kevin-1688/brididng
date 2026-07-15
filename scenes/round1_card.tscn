@@ -26,7 +26,7 @@ theme_override_colors/font_color = Color(0.898039, 0.639216, 0.239216, 1)
 theme_override_font_sizes/font_size = 34
 text = "Round 1"
 
-[node name="TopBar" type="HBoxContainer" parent="Layout"]
+[node name="TopBar" type="HFlowContainer" parent="Layout"]
 layout_mode = 2
 
 [node name="CounterLabel" type="Label" parent="Layout/TopBar"]
@@ -98,7 +98,7 @@ modulate = Color(0.576471, 0.635294, 0.709804, 1)
 layout_mode = 2
 autowrap_mode = 3
 
-[node name="NavBar" type="HBoxContainer" parent="Layout"]
+[node name="NavBar" type="HFlowContainer" parent="Layout"]
 layout_mode = 2
 theme_override_constants/separation = 12
 
